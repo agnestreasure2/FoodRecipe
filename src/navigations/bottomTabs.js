@@ -1,5 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { CurvedBottomBar } from 'react-native-curved-bottom-bar'
 import HomeScreen from "../screens/homeScreen";
 import { FontAwesome5 } from '@expo/vector-icons'
 import SaveScreen from "../screens/save";

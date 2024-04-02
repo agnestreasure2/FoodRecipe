@@ -8,7 +8,6 @@ import SplashScreen from '../screens/splashScreen';
 import BottomTabs from './bottomTabs';
 import FoodDetailScreen from '../screens/FoodDetailScreen';
 import Recipe from '../components/recipe';
-import RecipeScreen from '../screens/recipeScreen';
 
 
 
@@ -36,7 +35,7 @@ const StackScreen = () => {
       <Stack.Screen name='details' component={FoodDetailScreen}  />
 
       
-      <Stack.Screen name='recipe' component={RecipeScreen}  />
+      {/* <Stack.Screen name='recipe' component={RecipeScreen}  /> */}
       
     
     </Stack.Navigator>

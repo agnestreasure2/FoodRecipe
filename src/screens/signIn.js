@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView } from "react-native";
+import { View,
+Text,
+StyleSheet,
+TouchableOpacity,
+Image,
+ScrollView } from "react-native";
 import ReusableInput from "../components/reuseableInput";
 import { FontAwesome5 } from "@expo/vector-icons";
 

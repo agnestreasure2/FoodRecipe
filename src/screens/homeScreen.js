@@ -36,7 +36,7 @@ const HomeScreen = () => {
                  <Text style={styles.texts}>{item.title}</Text>
    
     </Pressable>
-   )}  horizontal={true} />
+              )}  horizontal={true} />
 
              <FlatList
                    data={products}
@@ -50,7 +50,7 @@ const HomeScreen = () => {
                 <Text style={styles.texts}>{item.name}</Text>
 
 </Pressable>
-)}  horizontal={true}  />
+            )}  horizontal={true}  />
 
         </View>
     )

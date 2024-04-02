@@ -23,11 +23,16 @@ const FoodDetailScreen = ({ navigation}) => {
 
             </View>
 
-      <ScrollView>
-      <ImageBackground source={{ uri: item.product.image }} style={styles.image}>
-        <View style={styles.ratingContainer}>
-          <FontAwesome5 name="star" size={16} color="#FFD700" style={styles.ratingIcon} /> 
-          <Text style={styles.ratingText}>{item.rating}</Text>
+
+           <ScrollView>
+
+            <ImageBackground source={{ uri: item.product.image }} style={styles.image}>
+
+            <View style={styles.ratingContainer}>
+
+             <FontAwesome5 name="star" size={16} color="#FFD700" style={styles.ratingIcon} /> 
+
+             <Text style={styles.ratingText}>{item.rating}</Text>
         </View>
 
 
@@ -37,7 +42,7 @@ const FoodDetailScreen = ({ navigation}) => {
                 <FontAwesome5 name="save" size={16} color="lightgreen"
                  style={styles.saveIcon} />
 
-              </View>
+         </View>
       </ImageBackground>
 
       <View style={styles.nameRow}>
