@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView } from "react-native";
 import ReusableInput from "../components/reuseableInput";
 import { FontAwesome5 } from "@expo/vector-icons";
+
 
 const SignIn = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <Text style={styles.header}>Hello, </Text>
 
@@ -39,7 +41,7 @@ const SignIn = ({navigation}) => {
 
       <TouchableOpacity
         style={styles.signInButton}
-        onPress={()=> navigation.navigate('Home')} 
+        onPress={()=> navigation.navigate('home')} 
       >
         <Text style={styles.signInText}>Sign In</Text>
         <FontAwesome5 name="arrow-right" size={16} color="#FFFFFF" />
@@ -63,8 +65,22 @@ const SignIn = ({navigation}) => {
             style={styles.socialMediaIcon}
           />
         </TouchableOpacity>
+
       </View>
+
+      <View style={styles.OptionText}>
+            <Text style={styles.textOption}>
+                Don't have an account?
+            </Text>
+
+            <TouchableOpacity
+            onPress={()=> navigation.navigate('signup')} 
+            >
+                <Text style={styles.signText}> Sign up</Text>
+            </TouchableOpacity>
+        </View>
     </View>
+    </ScrollView>
   );
 };
 
@@ -73,11 +89,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignContent: "center",
     justifyContent: "center",
-    top: 80,
+    top: '24%',
     
   },
   header: {
-    bottom: 40,
+    bottom: 20,
     fontSize: 40,
     fontWeight: "bold",
     left: 20
@@ -85,7 +101,7 @@ const styles = StyleSheet.create({
   subHeader: {
     fontSize: 30,
     fontWeight: "normal",
-    bottom: 40,
+    bottom: 20,
     left: 20
   },
   label: {
@@ -126,7 +142,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#009688",
     padding: 10,
     borderRadius: 15,
-    marginTop: 65,
+    marginTop: 60,
     width: 370,
     height: 70,
     left: 20
@@ -139,7 +155,9 @@ const styles = StyleSheet.create({
   },
   socialMediaContainer: {
     flexDirection: "row",
+    alignItems: 'center',
     justifyContent: "center",
+    
     
   },
   socialMediaIcon: {
@@ -150,6 +168,20 @@ const styles = StyleSheet.create({
     bottom: 20,
     borderRadius: 10
   },
+  OptionText: {
+    flexDirection: 'row',
+    marginTop: 40,
+    fontSize: 25,
+    color: '#ccc',
+    alignItems: 'center',
+    justifyContent: "center",
+},
+signText: {
+  color: 'orange'
+},
+textOption: {
+  fontSize: 15,
+}
 });
 
 export default SignIn;

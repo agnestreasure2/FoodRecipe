@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import { View, TextInput, StyleSheet } from 'react-native'
 
 const ReusableInput = ({label, onChangeText, placeholder, value, style, secureTextEntry}) => {
   return (
@@ -23,7 +23,7 @@ const ReusableInput = ({label, onChangeText, placeholder, value, style, secureTe
 const styles = StyleSheet.create ({
   inputCover: {
     alignSelf: 'center',
-    backgroundColor: '#f2f3f5',
+    backgroundColor: 'whitesmoke',
     width: '90%',
     height: 70,
     borderColor: "#DBDBDB",
