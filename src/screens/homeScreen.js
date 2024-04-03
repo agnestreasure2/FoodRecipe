@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, FlatList, Pressable } from "react-native";
+import { View, Text, StyleSheet, Image, FlatList, Pressable, ImageBackground } from "react-native";
 import Search from "../components/search";
 import category from "../data/category";
 import products from "../data/products";
@@ -33,24 +33,44 @@ const HomeScreen = () => {
     
                  style={styles.itemContainer}>
 
-                 <Text style={styles.texts}>{item.title}</Text>
+                 <Text style={styles.categoryText}>{item.title}</Text>
    
     </Pressable>
               )}  horizontal={true} />
 
-             <FlatList
-                   data={products}
-                    renderItem={({item})=> 
-                    (
-                   <Pressable
-                   onPress={()=>{}}
+<FlatList
+  data={products}
+  renderItem={({ item }) => (
+    <Pressable
+      onPress={() => {}}
+      >
 
-                  style={styles.image}>
-                 <Image source={{uri: item.image}}/>
-                <Text style={styles.texts}>{item.name}</Text>
+        <View style={styles.imageContainer}>
+    <View style={styles.image}>
+      <ImageBackground source={{ uri: item.image }} style={styles.imageStyle} />
+      </View>
+      
+      
+      <Text style={styles.text}>{item.name}</Text>
 
-</Pressable>
-            )}  horizontal={true}  />
+      <Text style={styles.text}>Time</Text>
+
+      <View>
+      <Text style={styles.texts}>{item.time}</Text>
+
+      <Image source={require('../assets/images/save.png')} 
+      style={styles.timeRow}
+      />
+      </View>
+      
+      
+      </View>
+    </Pressable>
+  )}
+  keyExtractor={(item) => item.id}
+  horizontal={true}
+/>
+
 
         </View>
     )
@@ -97,17 +117,55 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         top: 20,
     },
-    texts: {
-        alignSelf: 'center',
-        fontSize: 13,
-        color: '#009688'
+
+    categoryText: {
+        color: '#009688',
+        textAlign: 'center',
+        
     },
-    image: {
+    text: {
+        textAlign: 'center',
+        fontSize: 12,
+        color: 'black',
+        marginBottom: 0
+      },
+
+      imageContainer: {
+        backgroundColor: '#D9D9D9', 
+        padding: 10,
+        margin: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 260,
+        position: 'relative',
+        zIndex: 2,
+      },
+    
+      image: {
         width: 150,
-        height: 30,
-        aspectRatio:1,
-    }
-   
+        height: 150,
+        borderRadius: 75, 
+        overflow: 'hidden',
+        borderWidth: 1,
+        borderColor: 'black',
+        alignItems: 'center', 
+        top: -39    
+
+      },
+    
+      imageStyle: {
+        width: 150,
+        height: 150,
+        borderRadius: 75, 
+         
+      },
+
+      timeRow: {
+        width: 24,
+        height: 24,
+        color: 'red'
+      },
+
 })
 
 export default HomeScreen;

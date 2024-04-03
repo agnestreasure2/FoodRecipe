@@ -1,13 +1,15 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Text, Pressable } from 'react-native';
-import { FontAwesome5 } from "@expo/vector-icons";
-import HomeScreen from '../screens/homeScreen';
 import SignIn from '../screens/signIn';
 import SignUp from '../screens/signUp';
 import SplashScreen from '../screens/splashScreen';
 import BottomTabs from './bottomTabs';
 import FoodDetailScreen from '../screens/FoodDetailScreen';
 import Recipe from '../components/recipe';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import HomeScreen from '../screens/homeScreen';
+import SaveScreen from '../screens/save';
+import Noti from '../screens/notification';
+import ProfileScreen from '../screens/profile';
 
 
 
@@ -20,6 +22,10 @@ const StackScreen = () => {
 
 
   return (
+
+    // <SafeAreaView>
+    <SafeAreaProvider>
+
 
     <Stack.Navigator  screenOptions={{ headerShown: false }}>
 
@@ -34,13 +40,16 @@ const StackScreen = () => {
 
       <Stack.Screen name='details' component={FoodDetailScreen}  />
 
-      
-      {/* <Stack.Screen name='recipe' component={RecipeScreen}  /> */}
+  
+
+    
       
     
     </Stack.Navigator>
+    </SafeAreaProvider>
    
   
+    // {/* </SafeAreaView> */}
     
   );
 }

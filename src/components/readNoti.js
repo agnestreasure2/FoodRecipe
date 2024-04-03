@@ -117,11 +117,11 @@ const ReadScreen = () => {
         padding: 10,
       },
       notification: {
-        backgroundColor: "whitesmoke",
+        backgroundColor: "#D9D9D9",
         padding: 10,
         marginBottom: 10,
         borderRadius: 10,
-        // Shadow properties
+        
         shadowColor: "gray",
         shadowOffset: {
           width: 0,
@@ -156,14 +156,14 @@ const ReadScreen = () => {
       },
       loremText: {
         fontSize: 17,
-        color: "#ccc",
+        color: "#A9A9A9",
       },
       recipeText: {
         fontSize: 16,
         fontWeight: 'bold'
       },
       timeText: {
-        color: "#ccc",
+        color: "#A9A9A9",
         marginTop: 15
       },
     });

@@ -3,9 +3,11 @@ import { View, Text, StyleSheet, FlatList, Pressable, ImageBackground } from "re
 import { FontAwesome5 } from '@expo/vector-icons'; 
 
 import saveCarousel from "../data/saveCarousel";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const SaveScreen = ({ navigation }) => {
   return (
+    <SafeAreaProvider>
     <View style={styles.container}>
       <Text style={styles.savedText}>Saved Recipes</Text>
       <FlatList
@@ -41,6 +43,8 @@ const SaveScreen = ({ navigation }) => {
         keyExtractor={(item) => item.product.id}
       />
     </View>
+    <View style={{height: 40}}></View>
+    </SafeAreaProvider>
   );
 };
 
@@ -48,6 +52,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     top: '10%',
+    // paddingBottom: 40,
+    // marginBottom: 40,
+    backgroundColor: "white"
   },
   savedText: {
     textAlign: 'center',
