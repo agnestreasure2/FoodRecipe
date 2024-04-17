@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList, Pressable, ImageBackground } from "react-native";
 import { FontAwesome5 } from '@expo/vector-icons'; 
-
 import saveCarousel from "../data/saveCarousel";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
@@ -33,7 +32,7 @@ const SaveScreen = ({ navigation }) => {
                 <Text style={styles.subNameText}>{item.product.subName}</Text>
                 
                 <Text style={styles.timeText}>{item.time}</Text>
-                <FontAwesome5 name="save" size={16} color="lightgreen"
+                <FontAwesome5 name="save" size={16} color="#009688"
                  style={styles.saveIcon} />
 
               </View>

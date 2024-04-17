@@ -1,19 +1,19 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList, Pressable, ImageBackground } from "react-native";
 import { FontAwesome5 } from '@expo/vector-icons'; 
-
 import saveCarousel from "../data/saveCarousel";
+
 
 const Recipe = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <FlatList
         data={saveCarousel}
-        renderItem={({ item }) => (
+        renderItem={({ item }) => ( 
           <Pressable
-            onPress={() => navigation.navigate('details', {item})}
-            style={styles.itemContainer}
-          >
+          onPress={() => navigation.navigate('details', {item})}
+          style={styles.itemContainer}
+        > 
            
             <ImageBackground source={{ uri: item.product.image }} style={styles.image}>
            
@@ -24,13 +24,13 @@ const Recipe = ({ navigation }) => {
               </View>
               
               <Text style={styles.nameText}>{item.product.name}</Text>
-             
+          
               
               <View style={styles.bottomRow}>
                 <Text style={styles.subNameText}>{item.product.subName}</Text>
                 
                 <Text style={styles.timeText}>{item.time}</Text>
-                <FontAwesome5 name="save" size={16} color="lightgreen"
+                <FontAwesome5 name="save" size={16} color="#009688"
                  style={styles.saveIcon} />
 
               </View>
@@ -46,7 +46,8 @@ const Recipe = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    top: '10%',
+    top: '5%',
+
   },
   savedText: {
     textAlign: 'center',
@@ -122,3 +123,4 @@ const styles = StyleSheet.create({
 });
 
 export default Recipe;
+

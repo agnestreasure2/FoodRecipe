@@ -4,14 +4,7 @@ import SignUp from '../screens/signUp';
 import SplashScreen from '../screens/splashScreen';
 import BottomTabs from './bottomTabs';
 import FoodDetailScreen from '../screens/FoodDetailScreen';
-import Recipe from '../components/recipe';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import HomeScreen from '../screens/homeScreen';
-import SaveScreen from '../screens/save';
-import Noti from '../screens/notification';
-import ProfileScreen from '../screens/profile';
-
-
 
 
 

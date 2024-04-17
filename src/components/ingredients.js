@@ -55,6 +55,8 @@ const Ingredients = () => {
                 <Text style={styles.imageText}>Slice Bread</Text>
                 <Text style={styles.imageText3}>500g</Text>
             </View>
+
+            
         </View>
     )
 }
@@ -101,6 +103,7 @@ const styles = StyleSheet.create({
         borderRadius: 100, 
         overflow: 'hidden',
         marginRight: 5,
+        
         
     },
     image: {

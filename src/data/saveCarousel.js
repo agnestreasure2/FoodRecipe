@@ -37,10 +37,10 @@ export default [
           id: "4",
           image:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkphhwoBbkBdqiIRX7nvHsYXajC8uYa6BAWg&usqp=CAU",
-          name: "Spiced rooasted chicken with flavoured rice",
-          subName: 'By Chef John',
+          name: "Lamb chops with fruity couscouse and mint",
+          subName: 'By Spicy Nelly',
         },
-        rating: 4.5,
+        rating: 3.5,
         time: '20 min',
       },
   ];

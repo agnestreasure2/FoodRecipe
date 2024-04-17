@@ -173,7 +173,8 @@ const styles = StyleSheet.create({
   reviewRow: {
     fontSize: 15,
     left: 30, 
-    top: 6
+    top: 6,
+    color: '#A9A9A9'
   },
 });
 

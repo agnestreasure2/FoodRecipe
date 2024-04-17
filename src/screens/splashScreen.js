@@ -11,10 +11,10 @@ const SplashScreen = ({navigation}) => {
             <ImageBackground source={require ('../assets/images/vegeBg.png')}
             style={styles.bgImage}>
 
-                <Image source={require ('../assets/images/chef1.png')}
+                <Image source={require ('../assets/images/chef2.png')}
                 style={styles.imageContainer}
                 />
-            <Text style={styles.text}>100K + Premium Recipe</Text>
+            <Text style={styles.text}>100K+ Premium Recipe</Text>
 
             <View style={styles.cooking}>
                 <Text style={styles.textCooking}>Get</Text>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         fontSize: 45,
         fontWeight: 'bold',
         color: '#fff',
-        left: 40,
+        left: 42,
       },
       textCooking1: {
         fontSize: 45,

@@ -24,7 +24,7 @@ const styles = StyleSheet.create ({
   inputCover: {
     alignSelf: 'center',
     backgroundColor: 'whitesmoke',
-    width: '90%',
+    width: '100%',
     height: 70,
     borderColor: "#DBDBDB",
     borderRadius: 15,
