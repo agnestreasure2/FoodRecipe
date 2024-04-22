@@ -1,10 +1,9 @@
 import React from 'react'
 import { View, TextInput, StyleSheet } from 'react-native'
 
-const ReusableInput = ({label, onChangeText, placeholder, value, style, secureTextEntry}) => {
+const ReusableInput = ({label, onChangeText, placeholder, value, secureTextEntry}) => {
   return (
     <View>
-      {/* {label} */}
 
       <View style={styles.inputCover}>
         <TextInput

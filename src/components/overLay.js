@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Modal, TouchableOpacity } from "react-native";
-import {FontAwesome5} from '@expo/vector-icons'
 
-const OverLay = ({ isVisible, onClose, onSubmit }) => {
+
+const OverLay = ({ isVisible, onClose }) => {
   const [clickedOption, setClickedOption] = useState(null); 
 
   const handleOptionPress = (option) => {
@@ -22,6 +22,7 @@ const OverLay = ({ isVisible, onClose, onSubmit }) => {
     "Breakfast",
     "Spanish",
     "Tokyo",
+    
     "Lunch",
   
   ];
@@ -80,7 +81,7 @@ const OverLay = ({ isVisible, onClose, onSubmit }) => {
             </View>
           </View>
 
-          <TouchableOpacity style={styles.filterButton} onPress={onSubmit}>
+          <TouchableOpacity style={styles.filterButton} >
             <Text style={styles.filterButtonText}>Filter</Text>
           </TouchableOpacity>
         </View>
