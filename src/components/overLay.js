@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     color: "#009688",
     borderRadius: 10,
     borderWidth: 0.2,
-    borderColor: '#71B1A1'
+    borderColor: '#71B1A1',
 
   },
   clickedOption: {
@@ -151,12 +151,12 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     width: 174,
-    height: 37
+    height: 37,
   },
   filterButtonText: {
     color: "#fff",
     fontWeight: "bold",
-    textAlign: 'center'
+    textAlign: 'center',
   },
 });
 
