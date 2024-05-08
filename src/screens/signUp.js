@@ -18,6 +18,7 @@ const SignUp = ({navigation}) => {
   return (
 
     <ScrollView>
+      <View style={styles.container}>
     <View style={styles.TextContainer}>
         <View >
         <Text style={styles.TextButton}>Create an account</Text>
@@ -83,8 +84,7 @@ const SignUp = ({navigation}) => {
         <Text style={styles.paragraph}>   Accept terms & Conditions</Text>
       </View>
 
-      <TouchableOpacity
-        style={styles.signInButton}
+      <TouchableOpacity style={styles.signInButton}
         onPress={()=> navigation.navigate('Home')} 
       >
         <Text style={styles.signInText}>Sign Up</Text>
@@ -127,17 +127,18 @@ const SignUp = ({navigation}) => {
         </View>
         
     </View>
+    </View>
     </ScrollView>
   )
 }
 
 
 const styles = StyleSheet.create ({
-    TextContainer: {
-        flex: 1,
-        top: '10%',
-        marginLeft: 10
-    },
+  container: {
+    flex: 1,
+    top: "10%",
+    paddingHorizontal: 30,
+  },
     TextButton: {
         bottom: 15,
         fontSize: 30,
@@ -193,13 +194,14 @@ const styles = StyleSheet.create ({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#009688",
-        padding: 10,
+        paddingVertical: 10,
+        // paddingHorizontal: 30,
         borderRadius: 15,
         marginTop: 60,
-        width: 370,
+        width: "100%",
         height: 70,
-        left: 20
       },
+      
       signInText: {
         color: "#FFFFFF",
         fontSize: 18,

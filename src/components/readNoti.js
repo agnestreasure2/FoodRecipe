@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Platform } from "react-native";
 import {FontAwesome5} from '@expo/vector-icons'
 
 const ReadScreen = () => {
@@ -149,7 +149,8 @@ const ReadScreen = () => {
         backgroundColor: "#FFE5B4",
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: '50%',
+        marginLeft: Platform.OS === 'ios' ?'43%' : '43%',
+        marginLeft: Platform.OS === 'android' ?'43%' :'43%',
       },
       loremContainer: {
         marginTop: 8,

@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     color: "orange",
     fontSize: 15,
     top: 30,
-    left: 30,
+    left: 20,
   },
   option: {
     flexDirection: "row",

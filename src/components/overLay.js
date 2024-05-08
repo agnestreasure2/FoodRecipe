@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Modal, TouchableOpacity } from "react-native";
 
 
 const OverLay = ({ isVisible, onClose }) => {
-  const [clickedOption, setClickedOption] = useState(null); 
+  const [clickedOption, setClickedOption] = useState('All'); 
 
   const handleOptionPress = (option) => {
     console.log('selected option', option);
@@ -22,7 +22,6 @@ const OverLay = ({ isVisible, onClose }) => {
     "Breakfast",
     "Spanish",
     "Tokyo",
-    
     "Lunch",
   
   ];
@@ -45,7 +44,7 @@ const OverLay = ({ isVisible, onClose }) => {
           </View>
 
           <View style={styles.section}>
-            <Text style={styles.subHeading}>Time</Text>
+            <Text style={styles.subHeading1}>Time</Text>
             <View style={styles.optionContainer}>
               {["All", "Newest", "Oldest", "Popularity"].map((option, index) => (
                 <TouchableOpacity key={index} onPress={() => handleOptionPress(option)}>
@@ -56,13 +55,13 @@ const OverLay = ({ isVisible, onClose }) => {
           </View>
 
           <View style={styles.section}>
-            <Text style={styles.subHeading}>Rate</Text>
+            <Text style={styles.subHeading2}>Rate</Text>
             <View style={styles.optionContainer}>
               {[5, 4, 3, 2, 1].map((rate, index) => (
                 
                 <TouchableOpacity key={index} onPress={() => handleOptionPress(rate)}>
                   
-                  <Text style={[styles.option, clickedOption === rate && styles.clickedOption]}>{rate}</Text>
+                  <Text style={[styles.option1, clickedOption === rate && styles.clickedOption]}>{rate}</Text>
                   
                   
                 </TouchableOpacity>
@@ -121,13 +120,29 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "600",
     marginBottom: 5,
-    color: '#000000'
+    color: '#000000',
+    left: 30
+  },
+  subHeading1: {
+    fontSize: 14,
+    fontWeight: "600",
+    marginBottom: 5,
+    color: '#000000',
+    right: 9
+  },
+  subHeading2: {
+    fontSize: 14,
+    fontWeight: "600",
+    marginBottom: 5,
+    color: '#000000',
+    right: 60
   },
   optionContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
   },
+ 
   option: {
     fontSize: 16,
     marginBottom: 10,
@@ -139,6 +154,20 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 0.2,
     borderColor: '#71B1A1',
+   
+  },
+  option1: {
+    fontSize: 16,
+    marginBottom: 10,
+    marginRight: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    backgroundColor: '#FFFFFF',
+    color: "#009688",
+    borderRadius: 10,
+    borderWidth: 0.2,
+    borderColor: '#71B1A1',
+    right: 59
 
   },
   clickedOption: {

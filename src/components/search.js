@@ -38,13 +38,13 @@ const styles = StyleSheet.create({
   searchContainer: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: '5%',
+    marginTop: '4%',
     borderWidth: 1,
     borderColor: "#DBDBDB",
     borderRadius: 12,
     gap: 10,
     padding: 8,
-    width: 270,
+    width: 280,
     height: 55,
     backgroundColor: 'whitesmoke',
     right: 43
@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
   filterIcon: {
     position: "absolute",
     backgroundColor: "#009688",
-    borderRadius: 8,
-    padding: 8,
+    borderRadius: 10,
+    padding: 5,
     marginLeft: 293,
-    width: 50,
-    height: 45,
+    width: 40,
+    height: 40,
   },
 });
 

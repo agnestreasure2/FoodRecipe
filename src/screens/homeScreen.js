@@ -124,7 +124,7 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        top: '8%',
+        top: '7%',
         padding: 35,
         
     },
@@ -138,14 +138,15 @@ const styles = StyleSheet.create({
     subHeader: {
         fontSize: 16,
         color: "#ccc",
+        paddingTop: 7
     },
     icon: {
         bottom: 50,
         marginLeft: '20%',
         backgroundColor: "#FEBA4F",
         padding: 8,
-        width: 60,
-        height: 60,
+        width: 50,
+        height: 50,
         borderRadius: 15
     },
     itemContainer: {
